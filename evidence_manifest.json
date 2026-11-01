@@ -1,0 +1,54 @@
+{
+  "note": 16,
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "frames, drops, sync, IMU continuity",
+      "status": "Verified (automated)",
+      "evidence": [
+        "assets/tables/b1_session_integrity.csv",
+        "analysis/b1_per_frame_timing.csv.gz",
+        "analysis/b1_integrity.py"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "seamless file boundaries",
+      "status": "Verified (automated)",
+      "evidence": [
+        "assets/tables/b1_chunk_boundaries.csv"
+      ]
+    },
+    {
+      "id": "C3",
+      "claim": "calibration consistency per file",
+      "status": "Verified (automated)",
+      "evidence": [
+        "assets/tables/b3_by_chunk.csv",
+        "assets/tables/b3_by_session.csv",
+        "analysis/b3_matches.csv.gz",
+        "analysis/b3_calib_holdup.py"
+      ]
+    },
+    {
+      "id": "C4",
+      "claim": "QA report ships with every delivery from the next one on",
+      "status": "Implemented in QA tool and tested on this recording; adopted by management 2026-11-01",
+      "evidence": [
+        "analysis/qa/odl_delivery_qa.py"
+      ]
+    }
+  ],
+  "inputs": {
+    "environment": {
+      "python": "3.13.17",
+      "opencv": "4.10.0 (opencv-contrib-python-headless)",
+      "numpy": "2.2.6",
+      "pandas": "3.0.5",
+      "matplotlib": "3.11.2",
+      "os": "Linux x86_64 (CPU only)",
+      "analysis_date": "2026-11-01"
+    },
+    "recording": "2026-11-01 09:48–12:37, six sessions, device CCC4B2D9B5EA, fw 202609241525"
+  }
+}
